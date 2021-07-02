@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>My family book</title>
+</head>
+<body>
+   <h3>My Family Book</h3>
+   <img src="brother.jpg" id="family_member_image" width="400" height="400"> 
+   <h4 id="family_member_name"></h4>
+   <button onclick="update()">Next</button>
+   <script>
+   var names=[
+       "father", "mother" ,"sister" ,"brother"
+   ];
+   var images=[
+       "father.jpg", "mom.jpg", "sister.jpg", "brother.jpg"
+   ];
+   var i=0;
+   function update()
+   {
+   document.getElementById("family_member_image").src=images[i]
+   document.getElementById("family_member_name").innerHTML=names[i];
+   i++;
+   if (i>3){
+       i=0;
+   }
+   }
+
+   </script>
+</body>
+</html>
